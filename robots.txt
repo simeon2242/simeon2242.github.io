@@ -1,0 +1,25 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://simeon-bm.rf.gd/sitemap.xml
+
+# Disallow unnecessary files
+Disallow: /style.css
+Disallow: /script.js
+Disallow: /cv.css
+Disallow: /*.css$
+Disallow: /*.js$
+
+# Allow important pages
+Allow: /index.html
+Allow: /cv.html
+Allow: /*.webp$
+Allow: /*.jpg$
+Allow: /*.png$
+
+# Crawl delay
+Crawl-delay: 1
+
+# Host
+Host: https://simeon-bm.rf.gd

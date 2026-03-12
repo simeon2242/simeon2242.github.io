@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share - Dev Simeon Balume Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        h1 { margin-bottom: 30px; }
+        .share-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .share-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 15px 25px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+        .share-btn:hover {
+            transform: scale(1.05);
+        }
+        .linkedin { background: #0077b5; }
+        .twitter { background: #1da1f2; }
+        .facebook { background: #1877f2; }
+        .whatsapp { background: #25d366; }
+        .email { background: #ea4335; }
+        .copy { background: #333; }
+        
+        #copyStatus {
+            margin-top: 20px;
+            padding: 10px;
+            background: rgba(0,0,0,0.3);
+            border-radius: 5px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>📢 Share My Portfolio</h1>
+    <p>Help me reach more opportunities by sharing my portfolio!</p>
+    
+    <div class="share-buttons">
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://simeon-bm.rf.gd" target="_blank" class="share-btn linkedin">
+            <span>📊</span> Share on LinkedIn
+        </a>
+        
+        <a href="https://twitter.com/intent/tweet?text=Check%20out%20this%20amazing%20Full-Stack%20Developer!%20🚀%20Django%20%7C%20REST%20API%20%7C%20SEO%20Expert&url=https://simeon-bm.rf.gd&hashtags=WebDev,Django,Python,FullStack,Developer" target="_blank" class="share-btn twitter">
+            <span>🐦</span> Share on Twitter
+        </a>
+        
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://simeon-bm.rf.gd" target="_blank" class="share-btn facebook">
+            <span>📘</span> Share on Facebook
+        </a>
+        
+        <a href="https://wa.me/?text=Check%20out%20this%20talented%20Full-Stack%20Developer!%20🚀%20https://simeon-bm.rf.gd" target="_blank" class="share-btn whatsapp">
+            <span>💬</span> Share on WhatsApp
+        </a>
+        
+        <a href="mailto:?subject=Amazing Full-Stack Developer Portfolio&body=I found this talented developer you should check out: https://simeon-bm.rf.gd" class="share-btn email">
+            <span>✉️</span> Share via Email
+        </a>
+        
+        <button onclick="copyLink()" class="share-btn copy">
+            <span>🔗</span> Copy Link
+        </button>
+    </div>
+    
+    <div id="copyStatus"></div>
+    
+    <script>
+        function copyLink() {
+            const url = 'https://simeon-bm.rf.gd';
+            navigator.clipboard.writeText(url).then(() => {
+                const status = document.getElementById('copyStatus');
+                status.textContent = '✅ Link copied to clipboard!';
+                status.style.display = 'block';
+                setTimeout(() => {
+                    status.style.display = 'none';
+                }, 3000);
+            });
+        }
+    </script>
+</body>
+</html>
